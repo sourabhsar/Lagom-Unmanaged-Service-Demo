@@ -10,6 +10,7 @@
         <module>external-api</module>
         <module>user-api</module>
         <module>user-impl</module>
+        <module>gatling-tests</module>
     </modules>
 
     <build>
