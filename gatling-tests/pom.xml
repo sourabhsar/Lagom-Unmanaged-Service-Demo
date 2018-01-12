@@ -88,7 +88,7 @@
 							<dataFolder>${project.basedir}/src/test/resources/data</dataFolder>
 							<resultsFolder>${project.basedir}/src/test/results</resultsFolder>
 							<requestBodiesFolder>${project.basedir}/src/test/resources/bodies</requestBodiesFolder>
-							<simulationClass>Simulations</simulationClass>
+							<simulationClass>knolx.example.Simulations</simulationClass>
 						</configuration>
 						<goals>
 							<goal>execute</goal>
