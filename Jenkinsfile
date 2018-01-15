@@ -25,7 +25,6 @@ node {
     //Gatling Simulation script
     stage("Performance") {
         gatlingArchive()
-        //manager.addShortText("/home/yash/.jenkins/workspace/demo-Pipeline/gatling-test/src/test/results/simulations-1505816818577/index.html")
     }
 }
 
