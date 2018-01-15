@@ -6,8 +6,8 @@ node {
         echo 'branchName--------->'+branchName
     }
     stage('Maven') {
-        def MAVEN_HOME = tool 'M3'
-        MAVEN_HOME = "${MAVEN_HOME}/bin"
+        def MAVEN_HOME = "${tool 'M3'}/bin"
+        //MAVEN_HOME = "${MAVEN_HOME}/bin"
         echo 'MAVEN_HOME--------->'+MAVEN_HOME
         env.PATH = "${MAVEN_HOME}/bin:${env.PATH}"
         echo 'env.PATH----->['+ env.PATH +']'
@@ -25,7 +25,7 @@ node {
     //Gatling Simulation script
     stage("Performance") {
         gatlingArchive()
-        manager.addShortText("/home/yash/.jenkins/workspace/demo-Pipeline/gatling-test/src/test/results/simulations-1505816818577/index.html")
+        //manager.addShortText("/home/yash/.jenkins/workspace/demo-Pipeline/gatling-test/src/test/results/simulations-1505816818577/index.html")
     }
 }
 
@@ -39,9 +39,9 @@ private String getMicroserviceInformation() {
 }
 
 private String runMavenVerify(MAVEN_HOME) {
-    sh "ls -lrth ${MAVEN_HOME}"
-    String chmodStatus = sh script: "chmod +x ${MAVEN_HOME}", returnStatus: true
-    echo chmodStatus
+    // sh "ls -lrth ${MAVEN_HOME}" // executing shell commands in jenkinsfile
+    // String chmodStatus = sh script: "chmod +x ${MAVEN_HOME}", returnStatus: true // executing shell commands in jenkinsfile and taking respose from that
+    //echo chmodStatus
     int verificationStatus = sh script: "${MAVEN_HOME}/mvn clean verify --fail-at-end --batch-mode --update-snapshots", returnStatus: true
     echo 'Verification Status:['+verificationStatus+']'
     
