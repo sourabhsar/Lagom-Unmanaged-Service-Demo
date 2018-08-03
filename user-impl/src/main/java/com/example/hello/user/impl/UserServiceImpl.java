@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         CompletionStage<DsapAuthorizationResponse> dsapresponse = dsapExternalService
                 .authenticate()
                 .handleRequestHeader(requestHeader -> {
-                    requestHeader.withHeader("Authorization","Basic YW5kcm9pZDpkc2Fwc2VjcmV0MTIz");
+                    requestHeader.withHeader("Authorization","authorizationHeader");
                     System.out.println("My Headers>>>>>>>> " + requestHeader);
                     return requestHeader;
                 })

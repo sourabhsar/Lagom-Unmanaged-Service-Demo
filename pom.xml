@@ -53,7 +53,6 @@
 
         </plugins>
     </build>
-    <!--https://gatewaydsaptst1.marriott.com-->
     <dependencyManagement>
         <dependencies>
             <dependency>
