@@ -74,7 +74,7 @@ public class UserServiceImplTest {
                 .toCompletableFuture().get(5, SECONDS);
 
         System.out.println(receivedResponse);
-        assertEquals("helloUser method fails ", "Hello, Your UserId is " + ID, receivedResponse.getMessage());
+        assertEquals("authenticate method fails ", "Hello, Your UserId is " + ID, receivedResponse.getMessage());
     }
 
 }

@@ -63,7 +63,7 @@ public class UserServiceImplCompTest extends Mockito {
                 .invoke()
                 .toCompletableFuture().get(100, SECONDS);
 
-        assertEquals("helloUser method fails ", "Hello, Your UserId is " + ID, receivedResponse.getMessage());
+        assertEquals("authenticate method fails ", "Hello, Your UserId is " + ID, receivedResponse.getMessage());
 
     }
 
